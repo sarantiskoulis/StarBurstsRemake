@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/sarantis/CLionProjects/game3/cmake-build-debug"
+			"value" : "c:/Users/sarantis/CLionProjects/StarburstRemake/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/sarantis/CLionProjects/game3/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/sarantis/CLionProjects/StarburstRemake/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/sarantis/CLionProjects/game3"
+			"value" : "C:/Users/sarantis/CLionProjects/StarburstRemake"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/game3"
+			"value" : "C:/Program Files (x86)/Linegametemplate"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "game3"
+			"value" : "StarburstRemake"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1254,19 +1254,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
-		},
-		{
-			"name" : "game3_BINARY_DIR",
+			"name" : "Linegametemplate_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1275,10 +1263,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/sarantis/CLionProjects/game3/cmake-build-debug"
+			"value" : "C:/Users/sarantis/CLionProjects/StarburstRemake/cmake-build-debug"
 		},
 		{
-			"name" : "game3_IS_TOP_LEVEL",
+			"name" : "Linegametemplate_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1290,7 +1278,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "game3_SOURCE_DIR",
+			"name" : "Linegametemplate_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1299,7 +1287,55 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/sarantis/CLionProjects/game3"
+			"value" : "C:/Users/sarantis/CLionProjects/StarburstRemake"
+		},
+		{
+			"name" : "StarburstRemake_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/sarantis/CLionProjects/StarburstRemake/cmake-build-debug"
+		},
+		{
+			"name" : "StarburstRemake_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "StarburstRemake_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/sarantis/CLionProjects/StarburstRemake"
+		},
+		{
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		}
 	],
 	"kind" : "cache",

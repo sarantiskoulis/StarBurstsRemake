@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
-project(game3)
+project(StarburstRemake)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -11,8 +11,9 @@ include_directories(${YAML_CPP_INCLUDE_DIR})
 link_directories(${YAML_CPP_LIBRARIES})
 
 # For each target that uses yaml-cpp, link it against the library
-add_executable(game3 main.cpp
-        misc.cpp
-        misc.h)
+add_executable(StarburstRemake main.cpp
+        config.cpp
+        config.h
+       )
 
-target_link_libraries(game3 ${YAML_CPP_LIBRARIES})
+target_link_libraries(StarburstRemake ${YAML_CPP_LIBRARIES})

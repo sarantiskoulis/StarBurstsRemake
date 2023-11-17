@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: game3
+# Project: StarburstRemake
 # Configurations: Debug
 # =============================================================================
 # =============================================================================
@@ -14,7 +14,7 @@
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__game3_unscanned_Debug
+rule CXX_COMPILER__StarburstRemake_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__game3_unscanned_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__game3_Debug
+rule CXX_EXECUTABLE_LINKER__StarburstRemake_Debug
   command = cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\sarantis\CLionProjects\game3 -BC:\Users\sarantis\CLionProjects\game3\cmake-build-debug
+  command = "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\sarantis\CLionProjects\StarburstRemake -BC:\Users\sarantis\CLionProjects\StarburstRemake\cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

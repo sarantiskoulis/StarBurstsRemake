@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/sarantis/CLionProjects/game3
+# Install script for directory: C:/Users/sarantis/CLionProjects/StarburstRemake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/game3")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Linegametemplate")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/sarantis/CLionProjects/game3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/sarantis/CLionProjects/StarburstRemake/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

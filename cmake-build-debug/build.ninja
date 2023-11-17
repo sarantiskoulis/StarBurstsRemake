@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: game3
+# Project: StarburstRemake
 # Configurations: Debug
 # =============================================================================
 
@@ -39,53 +39,53 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/sarantis/CLionProjects/game3/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/sarantis/CLionProjects/StarburstRemake/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target game3
+# Object build statements for EXECUTABLE target StarburstRemake
 
 
 #############################################
-# Order-only phony target for game3
+# Order-only phony target for StarburstRemake
 
-build cmake_object_order_depends_target_game3: phony || CMakeFiles/game3.dir
+build cmake_object_order_depends_target_StarburstRemake: phony || CMakeFiles/StarburstRemake.dir
 
-build CMakeFiles/game3.dir/main.cpp.obj: CXX_COMPILER__game3_unscanned_Debug C$:/Users/sarantis/CLionProjects/game3/main.cpp || cmake_object_order_depends_target_game3
-  DEP_FILE = CMakeFiles\game3.dir\main.cpp.obj.d
+build CMakeFiles/StarburstRemake.dir/main.cpp.obj: CXX_COMPILER__StarburstRemake_unscanned_Debug C$:/Users/sarantis/CLionProjects/StarburstRemake/main.cpp || cmake_object_order_depends_target_StarburstRemake
+  DEP_FILE = CMakeFiles\StarburstRemake.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\game3.dir
-  OBJECT_FILE_DIR = CMakeFiles\game3.dir
+  OBJECT_DIR = CMakeFiles\StarburstRemake.dir
+  OBJECT_FILE_DIR = CMakeFiles\StarburstRemake.dir
 
-build CMakeFiles/game3.dir/misc.cpp.obj: CXX_COMPILER__game3_unscanned_Debug C$:/Users/sarantis/CLionProjects/game3/misc.cpp || cmake_object_order_depends_target_game3
-  DEP_FILE = CMakeFiles\game3.dir\misc.cpp.obj.d
+build CMakeFiles/StarburstRemake.dir/config.cpp.obj: CXX_COMPILER__StarburstRemake_unscanned_Debug C$:/Users/sarantis/CLionProjects/StarburstRemake/config.cpp || cmake_object_order_depends_target_StarburstRemake
+  DEP_FILE = CMakeFiles\StarburstRemake.dir\config.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\game3.dir
-  OBJECT_FILE_DIR = CMakeFiles\game3.dir
+  OBJECT_DIR = CMakeFiles\StarburstRemake.dir
+  OBJECT_FILE_DIR = CMakeFiles\StarburstRemake.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target game3
+# Link build statements for EXECUTABLE target StarburstRemake
 
 
 #############################################
-# Link the executable game3.exe
+# Link the executable StarburstRemake.exe
 
-build game3.exe: CXX_EXECUTABLE_LINKER__game3_Debug CMakeFiles/game3.dir/main.cpp.obj CMakeFiles/game3.dir/misc.cpp.obj | C$:/msys64/mingw64/lib/libyaml-cpp.dll.a
+build StarburstRemake.exe: CXX_EXECUTABLE_LINKER__StarburstRemake_Debug CMakeFiles/StarburstRemake.dir/main.cpp.obj CMakeFiles/StarburstRemake.dir/config.cpp.obj | C$:/msys64/mingw64/lib/libyaml-cpp.dll.a
   FLAGS = -g
   LINK_LIBRARIES = C:/msys64/mingw64/lib/libyaml-cpp.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/msys64/mingw64/lib/libyaml-cpp.dll.a
-  OBJECT_DIR = CMakeFiles\game3.dir
+  OBJECT_DIR = CMakeFiles\StarburstRemake.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = game3.exe
-  TARGET_IMPLIB = libgame3.dll.a
-  TARGET_PDB = game3.exe.dbg
+  TARGET_FILE = StarburstRemake.exe
+  TARGET_IMPLIB = libStarburstRemake.dll.a
+  TARGET_PDB = StarburstRemake.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\sarantis\CLionProjects\game3\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\sarantis\CLionProjects\StarburstRemake\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -96,7 +96,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\sarantis\CLionProjects\game3\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\sarantis\CLionProjects\game3 -BC:\Users\sarantis\CLionProjects\game3\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\sarantis\CLionProjects\StarburstRemake\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\sarantis\CLionProjects\StarburstRemake -BC:\Users\sarantis\CLionProjects\StarburstRemake\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -106,7 +106,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build game3: phony game3.exe
+build StarburstRemake: phony StarburstRemake.exe
 
 # =============================================================================
 # Folder targets.
@@ -114,9 +114,9 @@ build game3: phony game3.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/sarantis/CLionProjects/game3/cmake-build-debug
+# Folder: C:/Users/sarantis/CLionProjects/StarburstRemake/cmake-build-debug
 
-build all: phony game3.exe
+build all: phony StarburstRemake.exe
 
 # =============================================================================
 # Built-in targets
@@ -125,14 +125,14 @@ build all: phony game3.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/sarantis/CLionProjects/game3/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/sarantis/CLionProjects/StarburstRemake/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/sarantis/CLionProjects/game3/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/sarantis/CLionProjects/StarburstRemake/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
 
 
 #############################################
