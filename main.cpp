@@ -38,12 +38,9 @@ void game_runs(int start,int end
 
         int game_view[5][3] = {0};
         GetGameView(base_vec, game_view);
+        for (int spins = 0; spins < 3; ++spins) {
 
-        while (Spin) {
             vector<int> indexWild = ExpandWilds(game_view);
-            if (indexWild.size() == 0) {
-                Spin = false;
-            }
 
             for (int i = 0; i < 5 ; ++i) {
                 for (int  j = 0; j < 3 ; ++j) {
@@ -75,6 +72,21 @@ void game_runs(int start,int end
 
                 }
             }
+
+            if (indexWild.size() == 0) {
+                break;
+            }
+            else {
+                GetGameView(base_vec, game_view);
+                for (const int& wi: indexWild) {
+                    for (int n = 0; n <3; ++n) {
+                        game_view[wi][n] == 7;
+                    }
+                }
+
+            }
+
+
         }
         total_wins.push_back(line_point);
 
