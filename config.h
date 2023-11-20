@@ -43,9 +43,9 @@ PayTable GetPayTableFromYaml(const YAML::Node& yaml);
 void LoadPayLines(const YAML::Node &node, int pay_lines_arry[25][5]);
 void GetGameView(const std::vector<std::vector<int>>& base_vec, int game_view[5][3]);
 void GetGameLines(int game_view[5][3], int game_lines[10][5], const int pay_lines_array[10][5]);
-std::array<int, 2>  analyseArray(const int (&arr)[5]);
-std::vector<int> ExpandWilds(int game_view[5][3]);
+std::vector<std::pair<int, int>> analyseArray(const int (&arr)[5]);
+std::pair<bool, std::vector<int>> ExpandWilds(int game_view[5][3]);
 std::vector<int> FlattenData(const std::vector<std::vector<int>>& array);
 long long int GetArraySum(std::vector<int> wins_array);
-
+std::pair<double, double> GetStats(const std::vector<int>& wins, long long sum_wins, long long n, double default_bet);
 #endif //GAME3_MISC_H

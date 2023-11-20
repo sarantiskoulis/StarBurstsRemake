@@ -100,12 +100,34 @@ void GetGameLines(int game_view[5][3], int game_lines[10][5], const int pay_line
     }
 }
 
-std::array<int, 2>  analyseArray(const int (&arr)[5]) {
+std::vector<std::pair<int, int>>  analyseArray(const int (&arr)[5]) {
     int wild = 7;
     int consecutive_counts = 0;
     int first_value = arr[0];
-
+    std::vector<std::pair<int, int>> pairVector;
     for (int i=0; i < 5; ++i) {
+        if (arr[i] == first_value ||  arr[i] == wild) {
+            ++consecutive_counts;
+        }
+        else {
+            break;
+        }
+
+    }
+
+    if (consecutive_counts == 5) {
+        pairVector.push_back(std::make_pair(consecutive_counts , first_value));
+        return pairVector;
+    }
+
+    if (consecutive_counts >= 2) {
+        pairVector.push_back(std::make_pair(consecutive_counts , first_value));
+
+    }
+
+    consecutive_counts = 0;
+    first_value = arr[4];
+    for (int i=4 ; i >= 0; --i) {
         if (arr[i] == first_value ||  arr[i] == wild) {
             ++consecutive_counts;
         }
@@ -114,41 +136,36 @@ std::array<int, 2>  analyseArray(const int (&arr)[5]) {
         }
     }
 
-    if (consecutive_counts <= 2 ) {
-        consecutive_counts = 0;
-        first_value = arr[4];
-        for (int i=5 ; i >= 0; --i) {
-            if (arr[i] == first_value ||  arr[i] == wild) {
-                ++consecutive_counts;
-            }
-            else {
-                break;
-            }
-        }
-    }
-    if (consecutive_counts > 2 ) {
-        return  {consecutive_counts, first_value};
+    if (consecutive_counts >= 2 ) {
+        pairVector.push_back(std::make_pair(consecutive_counts , first_value));
     }
 
-    return {-1,-1};
+    return pairVector;
 
 }
+std::pair<bool, vector<int>> ExpandWilds(int game_view[5][3]) {
+    bool oneWild = false;
+    vector<int> infoArray;
 
-std::vector<int> ExpandWilds(int game_view[5][3]) {
-    std::vector<int> indexWild;
     for (int i = 0; i < 5; ++i) {
+        int num_wilds = 0;
         for (int l = 0; l < 3; ++l) {
             if (game_view[i][l] == 7) {
-                indexWild.push_back(i);
-                for (int m = 0; m < 3; ++m) {
-                    game_view[i][m] = 7;
-                }
-                break;
-
+                ++num_wilds;
+            }
+        }
+//        cout << num_wilds << endl;
+        if (num_wilds == 1) {
+            oneWild = true;
+            infoArray.push_back(i);
+            // Assuming you want to modify the current row if exactly one wild is found
+            for (int l = 0; l < 3; ++l) {
+                game_view[i][l] = 7; // Use assignment operator
             }
         }
     }
-    return indexWild;
+
+    return {oneWild, infoArray};
 }
 
 vector<int> FlattenData(const vector<vector<int>>& array) {
@@ -165,6 +182,26 @@ long long int GetArraySum(vector<int> wins_array) {
     return winnigns;
 }
 
+std::pair<double, double> GetStats(const std::vector<int>& wins, long long sum_wins, long long n, double default_bet) {
+    if (n <= 1) {
+        // Handle the case where n is 1 or less
+        throw std::invalid_argument("n must be greater than 1 to calculate variance.");
+    }
+
+    double sum_x_sq = 0;
+    for (const auto& win : wins) {
+        sum_x_sq += pow(static_cast<double>(win) / default_bet, 2) ;
+    }
+
+    // Ensure the multiplication does not overflow
+    long double sum_wins_sq = pow( sum_wins / default_bet, 2) ;
+
+
+    double var = (1.0 / (n - 1)) * (sum_x_sq - (sum_wins_sq / static_cast<double>(n)));
+    double std_dev = std::sqrt(var);
+
+    return {var, std_dev};
+}
 
 
 
