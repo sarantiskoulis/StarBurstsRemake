@@ -202,6 +202,22 @@ std::pair<double, double> GetStats(const std::vector<int>& wins, long long sum_w
 
     return {var, std_dev};
 }
+std::array<long long int, 4> GetHighWins(const std::vector<int>& flat_array, int default_bet) {
+    long long int h1l = static_cast<long long int>(default_bet) * 12;
+    long long int h1h = static_cast<long long int>(default_bet) * 40;
+    std::array<long long int, 4> win_frequency_count = {0, 0};
+    for (const int val : flat_array) {
+        if (val < h1h && val >= h1l) {
+            ++win_frequency_count[0];
+            win_frequency_count[1] += val;
+        } else if (val > h1h) {
+            ++win_frequency_count[2];
+            win_frequency_count[3] += val;
+        }
+    }
+
+    return win_frequency_count;
+}
 
 
 

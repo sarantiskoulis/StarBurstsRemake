@@ -206,6 +206,7 @@ int main() {
     );
     double game_variance = game_stats.first;
     double game_std = game_stats.second;
+
     // Free Spin Points
     vector<int> total_free_wins_values =  FlattenData(free_spins_wins);
     long long int total_free_spins_winnings = GetArraySum(total_free_wins_values);
@@ -245,16 +246,37 @@ int main() {
     double game_rtp = total_winnings / static_cast<double>(bet);
     double base_rtp = total_base_winnings/ static_cast<double>(bet);
     double free_spins_rtp = total_free_spins_winnings / static_cast<double>(bet);
+
+    std::array<long long int,4> HighWins = GetHighWins(total_wins_values, default_bet);
+    long long int HL_frequency = HighWins[0];
+    long long int HL_points = HighWins[1];
+    long long int HH_frequency = HighWins[2];
+    long long int HH_points = HighWins[3];
+    double risk_all = (game_variance) / (1 - game_rtp);
+    double higher_bound = game_rtp + (1.96 * (game_std / sqrt(num_elements)));
+    double lower_bound = game_rtp - (1.96 * (game_std / sqrt(num_elements)));
+
     cout << "Iterations: " << num_elements << endl;
     cout << "Total Bet: " << bet << endl;
     cout << "Total Wins: " << total_winnings << endl;
     cout << "Total RTP: " << game_rtp << endl;
     cout << "Variance: " << game_variance << endl;
     cout << "Standard Dev.: " << game_std << endl;
+    cout << "Risk: " << risk_all << endl;
+    cout << "Confidence Interval: " << lower_bound << " - " << higher_bound << endl;
     cout << "Hit Frequency: " << total_wins_values.size()/ static_cast<double>(num_elements) << endl;
+    cout << std::fixed << std::setprecision(0);
+    cout << "Wins 12x - 40x: 1 in " << static_cast<double>(num_elements) / HL_frequency;
+    cout << std::fixed << std::setprecision(5);
+    cout << " rtp: " << HL_points / static_cast<double>(num_elements* 30) << endl;
+    cout << std::fixed << std::setprecision(0);
+    cout << "Wins 40x - : 1 in " << static_cast<double>(num_elements) / HH_frequency;
+    cout << std::fixed << std::setprecision(5);
+    cout << " rtp: " << HH_points / static_cast<double>(num_elements* 30) << endl;
     cout << endl << endl;
 
 
+    cout << "--------" <<endl;
     cout << "Base Spins" << endl;
     cout << "RTP: " << base_rtp << endl;
     cout << "Variance: " << base_variance << endl;
@@ -266,7 +288,8 @@ int main() {
     cout << "Variance: " << free_spins_variance << endl;
     cout << "Standard Dev.: " << free_spins_std << endl;
     cout << "Hit Frequency: " << total_free_wins_values.size()/ static_cast<double>(num_elements)  << endl;
-    cout << "Wild Hit Frequency: 1 in " << num_elements / (wild_hit_f[0] + wild_hit_f[1]+ wild_hit_f[2]) << endl;
+    cout << "--------" <<endl;
+    cout << "Wild Occurance Rate: 1 in " << num_elements / (wild_hit_f[0] + wild_hit_f[1]+ wild_hit_f[2]) << endl;
     for (int wildIter = 0; wildIter < 3; ++wildIter ) {
         cout << wildIter+1 << " wild : 1 in " << num_elements / wild_hit_f[wildIter] << "  RTP : " << wild_points_f[wildIter] << endl;
     }

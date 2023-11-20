@@ -48,4 +48,5 @@ std::pair<bool, std::vector<int>> ExpandWilds(int game_view[5][3]);
 std::vector<int> FlattenData(const std::vector<std::vector<int>>& array);
 long long int GetArraySum(std::vector<int> wins_array);
 std::pair<double, double> GetStats(const std::vector<int>& wins, long long sum_wins, long long n, double default_bet);
+std::array<long long int, 4> GetHighWins(const std::vector<int>& flat_array, int default_bet);
 #endif //GAME3_MISC_H
